@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 
 import { Paperclip, Send, Smile } from "lucide-react";
-import { useContextData } from "../../context";
+import { useContextData } from "../../context/context";
 
 const MessageInput = () => {
   const [message, setMessage] = useState("");

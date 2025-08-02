@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import { useContextData } from "../../context";
+import { useContextData } from "../../context/context";
 
 const MessageArea = () => {
   const messagesEndRef = useRef(null);
