@@ -1,16 +1,23 @@
-import ChatHeader from "./components/ChatHeader";
-import MessageArea from "./components/MessageArea";
-import MessageInput from "./components/MessageInput";
+import { Route, Router } from "react-router";
+import AuthPage from "./pages/AuthPage";
+import MessagePage from "./pages/MessagePage";
+import ProtectedRote from "./components/auth/ProtectedRote";
 
 function App() {
   return (
-    <div className="flex flex-col h-screen max-w-4xl mx-auto bg-white">
-      <ChatHeader />
-
-      <MessageArea />
-
-      <MessageInput />
-    </div>
+    <>
+      <Router>
+        <Route path="/authPage" element={<AuthPage />} />
+        <Route
+          path="/messagePage"
+          element={
+            <ProtectedRote>
+              <MessagePage />
+            </ProtectedRote>
+          }
+        />
+      </Router>
+    </>
   );
 }
 
