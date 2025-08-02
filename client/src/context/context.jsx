@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { messagesData } from "./data";
+import { messagesData } from "../data";
 
 export const Context = createContext();
 
