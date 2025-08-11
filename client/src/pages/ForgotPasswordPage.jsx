@@ -7,7 +7,8 @@ import Button from "../components/auth/Button";
 import { useContextData } from "../context/context";
 
 const ForgotPasswordPage = () => {
-  const { success, errors, forgotForm, setForgotForm } = useContextData();
+  const { success, setSuccess, errors, forgotForm, setForgotForm } =
+    useContextData();
   return (
     <FormContainer
       icon={<KeyRound className="w-8 h-8 text-white" />}
