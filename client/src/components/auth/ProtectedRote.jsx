@@ -1,10 +1,10 @@
-import React from "react";
+import { useContextData } from "../../context/context";
 
 const ProtectedRote = ({ children }) => {
-  const isLogin = true; // This should be replaced with actual authentication logic
+  const { isAuthenticated } = useContextData();
   return (
     <>
-      {!isLogin ? (
+      {!isAuthenticated ? (
         <Navigate to="/authPage" replace />
       ) : (
         <div>
